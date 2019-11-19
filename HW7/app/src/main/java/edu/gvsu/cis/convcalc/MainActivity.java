@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
                     DateTimeFormatter fmt = ISODateTimeFormat.dateTime();
                     HistoryContent.HistoryItem item = new HistoryContent.HistoryItem(dVal, cVal, mode.toString(),
-                            fUnits.toString(), tUnits.toString(), fmt.print(DateTime.now()));
+                            fUnits.toString(), tUnits.toString(), DateTime.now().toString());
                     HistoryContent.addItem(item);
                     topRef.push().setValue(item);
                     break;
@@ -181,7 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
                     DateTimeFormatter vfmt = ISODateTimeFormat.dateTime();
                     HistoryContent.HistoryItem volItem = new HistoryContent.HistoryItem(vdVal, vcVal, mode.toString(),
-                            vfUnits.toString(), vtUnits.toString(), vfmt.print(DateTime.now()));
+                            vfUnits.toString(), vtUnits.toString(), DateTime.now().toString());
+
                     HistoryContent.addItem(volItem);
                     topRef.push().setValue(volItem);
 
